@@ -11,6 +11,9 @@
       color: #808284;
     }
     a {
+      color: #555;
+    }
+    a:hover {
       color: #e15545;
     }
     .wrapper {
@@ -20,19 +23,6 @@
       font-size: 0.9em;
     }
     .columns {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .columns ul {
-      list-style-position: inside;
-    }
-    @media screen and (min-width: 640px) {
-      .columns {
-        flex-wrap: nowrap;
-      }
-      .columns ul {
-        width: 50%;
-      }
     }
     .name {
       color: #0d6ca4;
@@ -77,6 +67,13 @@
       letter-spacing: 1px;
       margin-bottom: -1%;
       text-decoration: none;
+      line-height: 2;
+    }
+    .primary-titles a {
+      font-size: 0.8em;
+      font-weight: 300;
+      font-style: italic;
+      color: #808284;
     }
     .caps {
       color: #58585b;
@@ -120,7 +117,7 @@
       padding-left: 2%;
     }
     li {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     strong {
       color: #555;
@@ -166,7 +163,7 @@
         <h2 class="category-headers">Professional Summary</h2>
         <hr />
         <p class="category-description category-description--main">
-          Accomplished <strong>Front-End Web Developer</strong> with Project
+          Accomplished <strong>Full-Stack Web Developer</strong> with Project
           Management and Team Leading experience committed to maintaining
           cutting edge technical skills and up-to-date industry knowledge.
         </p>
@@ -176,54 +173,70 @@
         <h2 class="category-headers">Skills</h2>
         <hr />
         <section class="columns">
-          <ul>
-            <li>
-              <span class="primary-titles">HTML/CSS</span>
-              (LESS/SCSS/PostCSS/CSS modules, CSS in JS)
-            </li>
-            <li>
-              <span class="primary-titles">Responsive Web Design</span>
-              (mobile-first, touch-enabled)
-            </li>
-            <li>
-              <span class="primary-titles">CSS frameworks</span>: Tailwind CSS,
-              Bootstrap, Foundation, MDL (Material Design Lite) and
-              Methodologies: BEM, Atomic CSS
-            </li>
-          </ul>
-          <ul>
-            <li><span class="primary-titles">JavaScript, Typescript</span></li>
-            <li>
-              Front-End <span class="primary-titles">JS frameworks</span>:<br />
-              React (Next.js, Apollo, Redux, Redux-Saga, SSR) - my main
-              stack.<br />
-              Also worked with Angular,&nbsp;Backbone,&nbsp;jQuery
-            </li>
-            <li>
-              JS <span class="primary-titles">testing frameworks</span>: Jest,
-              Enzyme
-            </li>
-            <li>
-              <span class="primary-titles">Build systems</span> (Webpack, Gulp,
-              Grunt)
-            </li>
-            <li>
-              <span class="primary-titles">Backend Development</span> (Node.js,
-              Graphql, Prisma, Nexus) | <strong><em>Half-backed</em></strong>
-            </li>
-          </ul>
+          <div>
+            <h3 class="category-headers">Front-End Development</h3>
+            <ul>
+              <li>
+                <span class="primary-titles">HTML/CSS</span>
+                <br />
+                Frameworks like Ant Design, Material Design, Tailwind CSS and
+                Methodologies: BEM, Atomic CSS. Transitions and animations.
+              </li>
+              <li>
+                <span class="primary-titles">Responsive Web Design</span><br />
+                Mobile-first, touch-enabled.
+              </li>
+              <li>
+                <span class="primary-titles">JavaScript</span>
+                (Typescript)<br />
+                Vanilla (browser extensions)<br />
+                Frameworks: React (SSR, Server Components), Next.js, Apollo,
+                Angular<br />
+                Testing frameworks: (Jest, Enzyme)<br />
+                Build systems (Webpack, Gulp)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="category-headers">Backend Development</h3>
+            <ul>
+              <li>Node.js, Graphql, Prisma, Drizzle ORM, SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="category-headers">Mobile Development</h3>
+            <ul>
+              <li>React Native, Flutter</li>
+            </ul>
+          </div>
         </section>
-        <p class="category-description category-description--main">
-          My core competency lies in creating the right architecture for a
-          project to be flexible, easily maintainable and extendable.
-        </p>
       </article>
 
       <h2 class="category-headers">Work history</h2>
       <hr />
       <article>
         <p class="primary-titles">
-          Lift & Co. Ltd | <span class="caps">Toronto, Canada</span>
+          Valvespace Ltd |
+          <a href="https://www.valvespace.com" target="_blank"
+            >valvespace.com</a
+          >
+          |
+          <span class="caps">London, UK (remote)</span>
+        </p>
+        <p class="category-details">
+          <strong>Full Stack Web Developer</strong><br />
+          <em>Apr 2019 - Mar 2025</em>
+        </p>
+        <p class="category-description">
+          I started as the first full-time developer in the startup (Front-End).
+          Six years later leaving a profitable company as a Full-Stack engineer.
+        </p>
+      </article>
+      <article>
+        <p class="primary-titles">
+          Lift & Co. Ltd |
+          <a href="https://lift.co" target="_blank">lift.co</a> |
+          <span class="caps">Toronto, Canada (remote)</span>
         </p>
         <p class="category-details">
           <strong>Front-End Team Lead</strong><br />
@@ -231,18 +244,24 @@
         </p>
         <p class="category-description">
           Initially created v2 (full rewrite from Angular to React) of Lift's
-          main product - SPA https://lift.co from scratch. With the new design
-          and technology behind it, the company successfully made its public
-          debut in April 2019. When the team began to grow I was still engaged
-          in development, but my main responsibilities were the following:
-          teaching Front-End Team development best-practices, review PRs,
-          working on projects' maintenance, learning new technology and
-          considering implementing it in company's projects.
+          main product - SPA from scratch. With the new design and technology
+          behind it, the company successfully made its public debut in April
+          2019. When the team began to grow I was still engaged in development,
+          but my main responsibilities were the following: teaching Front-End
+          Team development best-practices, review PRs, working on projects'
+          maintenance, learning new technology and considering implementing it
+          in company's projects.
         </p>
       </article>
       <article>
         <p class="primary-titles">
-          Practice Insight | <span class="caps">Perth, Australia</span>
+          Practice Insight |
+          <a
+            href="https://wisetime.com/practice-insight-becomes-wisetime/"
+            target="_blank"
+            >wisetime.com</a
+          >
+          | <span class="caps">Perth, Australia (remote)</span>
         </p>
         <p class="category-details">
           <strong>Front-End Web Developer</strong><br />
@@ -260,16 +279,17 @@
           Smart Seven | <span class="caps">Minsk, Belarus</span>
         </p>
         <p class="category-details">
-          <strong>Front-End Team Lead</strong><br />
+          <strong>Web Developer</strong><br />
           <em>Jan 2012 - Dec 2013</em>
         </p>
         <p class="category-description">
-          Lead a team of Front-End Developers and coded myself a lot.
+          Managed a team of developers and coded myself a lot.
         </p>
       </article>
       <article>
         <p class="primary-titles">
           Silicon Valley Software Group |
+          <a href="https://svsg.co">svsg.co</a> |
           <span class="caps">Minsk, Belarus</span>
         </p>
         <p class="category-details">
